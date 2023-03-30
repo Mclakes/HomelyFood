@@ -1,0 +1,465 @@
+.nav__background {
+    grid-row: 1/2;
+    grid-column: left-border-start/ right-border-end;
+    background-color: $color-background;
+    
+}
+nav{
+    grid-column: center-start/  center-end;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+
+    & ul{
+        display: flex;
+        align-self: flex-start;
+        & li {
+            list-style: none;
+            display: inline-block;
+            margin: 2rem 4rem;
+            & a {
+                text-decoration: none;
+                color: $color-black 
+            }
+        }
+    }
+
+    & img {
+        // display: block;
+        margin: 2rem;
+    }  
+}
+.intro {
+    grid-row: 2/3;
+    grid-column: center-start/center-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 70vh;
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-evenly;
+        align-items: self-start;
+        padding: 5rem 0;
+
+        width: 80%;
+        & h1 {
+            font-size: 4rem;
+            line-height: 5.6rem;
+            padding-bottom: 1rem;
+            & span {
+                color: $color-primary;
+            }
+        }
+        & p {
+            font-size: 2rem;
+            width: 80%;
+            padding-bottom: 1rem;
+        }
+        & button {
+            margin-top:2rem;
+            padding: 1rem 2rem;
+            background-color: $color-primary;
+            border: none;
+            border-radius: .7rem;
+            color: $color-white;
+            box-shadow: 0px 1rem 1rem rgba(0,0,0,0.2);
+        }
+    }
+    & .intro-pic{
+        padding: 2rem;
+        background-image: url(../img/intro-pic.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.rating{
+    grid-row: 3/4;
+    grid-column: col-start 2 /col-end 5 ;
+    margin-bottom: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    &-content{
+        text-align: center;
+        & h3 {
+            font-size: 2rem;  
+        }
+        & p {
+            font-size: 1.2rem;
+        }
+    }
+}
+.choose {
+    grid-row: 4/5;
+    grid-column: col-start 2 /col-end 5 ;
+
+    text-align: center;
+    & h3 {
+        font-size: 3rem;
+        color: $color-primary;
+        // ;spomething spacing 
+    }
+    & p {
+        font-size: 1.5rem;
+    }
+}
+.reason {
+    grid-row: 5/6;    
+    grid-column: center-start/center-end;
+    padding: 4rem 0;
+    grid-gap: 3rem;
+
+    background-color: $color-background;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    &s {
+        background-color: $color-white;
+        text-align: center;
+        & .icon {
+            margin: 2rem;
+        }
+        & h4 {
+            font-size: 2rem;
+            margin: 2rem;
+        }
+        & p {
+            font-size: 1.5rem;
+            margin: auto 4rem;
+        }
+
+    }
+
+}
+.routine {
+    grid-row: 6/7;
+    grid-column: col-start 2 /col-end 5;
+    margin: 5rem 0;
+
+    text-align: center;
+    & h3 {
+        font-size: 3rem;
+        color: $color-primary;
+        // ;spomething spacing 
+    }
+    & p {
+        font-size: 1.5rem;
+    }
+}
+.order {
+    &_1 {
+        grid-row: 7/8;
+    }
+    &_2 {
+        grid-row: 8/9;
+    }
+    
+    grid-column: center-start/center-end;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    &s{
+        padding: 1.3rem 0.8rem;
+        border: 1px solid rgba($color-primary, 0.3);
+        & img {
+            width: 19rem;
+        }
+        &>p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        & .price  {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            & p {
+                font-size: 2rem; 
+                margin-right: 1rem; 
+            }
+            & button {
+                padding: 1rem 2rem;
+                background-color: $color-primary;
+                border: none;
+                border-radius: .7rem;
+                color: $color-white;
+                box-shadow: 0px 1rem 1rem rgba(0,0,0,0.2);
+            }
+        }
+    }
+
+}
+.about {
+    grid-row: 9/10;
+    grid-column: center-start/ center-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5rem 0;
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-evenly;
+        align-items: self-start;
+        padding: 5rem 0;
+
+        width: 80%;
+        & h1 {
+            font-size: 4rem;
+            line-height: 5.6rem;
+            padding-bottom: 1rem;
+            & span {
+                color: $color-primary;
+            }
+        }
+        & p {
+            font-size: 1.4rem;
+            width: 90%;
+            padding-bottom: 1rem;
+            color: rgba(0,0,0,0.7);
+        }   
+        
+        & button {
+            margin-top:2rem;
+            padding: 1rem 2rem;
+            background-color: $color-primary;
+            border: none;
+            border-radius: .7rem;
+            color: $color-white;
+            box-shadow: 0px 1rem 1rem rgba(0,0,0,0.2);
+        }
+    }
+
+    &__pic{
+        & img {
+            width: 17rem;
+            border-radius: 4px;
+        }
+        position: relative;
+        & .image1 {
+            position: absolute;
+            top: -2rem;
+            z-index: 5;
+        }
+        & .plane1 {
+            position: absolute;
+            top: -3rem;
+            left: -1rem;
+        }
+        & .image2 {
+            position: absolute;
+            top: 15rem;
+            left: 15rem;
+            z-index: 10;
+        }
+        & .plane2 {
+            position: absolute;
+            top: 18rem;
+            left: 17rem;
+        }
+    }
+}
+.mobile {
+    grid-row: 10/11;
+    grid-column: col-start 2 /col-end 5;
+    margin: 5rem 0 0rem 0;
+
+    text-align: center;
+    & h3 {
+        font-size: 3rem;
+        color: $color-primary;
+        // ;spomething spacing 
+    }
+    & p {
+        font-size: 1.5rem;
+    }
+}
+.app {
+    grid-row: 11/12;
+    grid-column: center-start/center-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__text{
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color:rgba($color-black, 0.7);
+        & p {
+            font-size: 1.9rem;
+            width: 90%;
+            padding-bottom: 1rem;
+            font-weight: 300;
+        }
+        & .download{
+            width: 100%;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            & button {
+                width: 100px;
+                height: 40px;
+                background-color: $color-black;
+                margin-right: 7px;
+                border-radius: 8px;
+                & img{
+                    width: 100%;
+                }
+                // & a {
+                //     display: block;
+                // }
+            }
+        }
+    }
+    &__pic {
+        position: relative;
+        transform: translateX(-10rem);
+        & .iphone_straight{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        & .iphone_slant{
+            position: absolute;
+            top: 3rem;
+            left: 19rem;
+        }
+    }
+
+}
+.testimonial {
+    grid-row: 12/13;
+    grid-column: col-start 2 /col-end 5;
+    margin: 5rem 0;
+
+    text-align: center;
+    & h3 {
+        font-size: 3rem;
+        color: $color-primary;
+    }
+    & p {
+        font-size: 1.5rem;
+    }
+}
+.testimony{
+    grid-row: 13/14;    
+    grid-column: center-start/center-end;
+    padding: 4rem 0;
+    grid-gap: 3rem;
+
+    background-color: $color-white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    &s {
+        background-color: $color-white;
+        & h2 {
+            font-size: 2.2rem;
+        }
+        & h4 {
+            font-size: 1.2rem;
+            color: rgba($color-black, 0.8);
+        }
+        & p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            width: 90%;
+            color: rgba($color-black, 0.5);
+        }
+
+    }
+}
+.newsletter{
+    grid-row: 14/15;    
+    grid-column: col-start 2 /col-end 5;
+    padding: 4rem 0;
+
+    text-align: center;
+    & h3 {
+        font-size: 3rem;
+        color: $color-primary;
+    }
+    & p {
+        font-size: 1.5rem;
+        color: rgba($color-black, 0.5);
+        margin-bottom: 2rem;
+    }
+    & input {
+        width: 26rem;
+        height: 4rem;
+        margin-right: 2rem;
+    }
+    & label {
+        width: 100%;
+        height: 100%;
+        & button {
+            color: $color-white;
+            font-size: 1.5rem;
+            background-color: rgba($color-primary, 0.8);
+            border: none;
+            border-radius: 2px;
+            height: 100%;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 3px rgba($color-black, 0.5);
+        } 
+    }
+}
+.footer_background {
+    grid-row: 15/16;
+    grid-column: left-border-start/right-border-end;
+    background-image: linear-gradient(to right, rgba(#ff4d00, .9), rgba(#ff4d00, .6))
+}
+footer{
+    grid-row: 15/16;
+    grid-column: col-start 2 /col-end 5;
+    & table {
+        grid-row: 15/16;
+        padding: 4rem;
+        font-size: 1.2rem;
+        width: 100%;
+        color: $color-white;
+        & tr {
+            margin: 1rem;
+            & th {
+                text-align: left;
+                font-size: 2rem;
+                padding: 0.8rem 0;
+              }
+              & td {
+                padding: 0.8rem 0;
+              }
+          }
+      }
+}
+  .copyright {  
+    & hr {
+        color: $color-white;
+        border: 2px solid $color-white;
+    }
+    text-align: center;
+    color: $color-white;
+    font-size: 1.1rem;
+  }
+
+
+
+
+
+
+
+
+
