@@ -100,21 +100,20 @@ nav {
     .intro__text h1 {
       font-size: 4rem;
       line-height: 5.6rem;
-      padding-bottom: 1rem; }
+      padding-bottom: 1rem;
+      transition: all .3s; }
       .intro__text h1 span {
-        color: #ff4d00; }
+        display: inline;
+        color: #ff4d00;
+        transition: all .2s; }
+        .intro__text h1 span:hover {
+          text-shadow: 0.5rem 1rem 2rem rgba(255, 77, 0, 0.5); }
     .intro__text p {
       font-size: 2rem;
       width: 80%;
       padding-bottom: 1rem; }
     .intro__text button {
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background-color: #ff4d00;
-      border: none;
-      border-radius: .7rem;
-      color: #fff;
-      box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2); }
+      margin-top: 2rem; }
   .intro .intro-pic {
     display: flex;
     justify-content: center;
@@ -140,6 +139,9 @@ nav {
       font-size: 2rem; }
     .rating-content p {
       font-size: 1.2rem; }
+  .rating:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .choose {
   grid-row: 4/5;
@@ -154,7 +156,10 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr); }
   .reasons {
-    background-color: #fff; }
+    background-color: #fff;
+    padding: 3rem 0;
+    border-radius: 1rem;
+    transition: all .3s; }
     .reasons .icon {
       margin: 2rem; }
     .reasons h4 {
@@ -163,6 +168,10 @@ nav {
     .reasons p {
       font-size: 1.5rem;
       margin: auto 4rem; }
+    .reasons:hover {
+      transform: scale(1.1);
+      background-color: rgba(255, 77, 0, 0.3);
+      box-shadow: 0, 1rem 2rem rgba(0, 0, 0, 0.9); }
 
 .routine {
   grid-row: 6/7;
@@ -180,9 +189,15 @@ nav {
   text-align: center; }
   .orders {
     padding: 2rem 0.5rem;
-    border: 1px solid rgba(255, 77, 0, 0.3); }
+    border: 1px solid rgba(255, 77, 0, 0.3);
+    transition: all .2s; }
+    .orders:hover {
+      transform: scale(1.1); }
     .orders img {
-      width: 19rem; }
+      width: 19rem;
+      transition: all .2s; }
+      .orders img:hover {
+        transform: scale(1.1); }
     .orders > p {
       font-size: 1.5rem;
       font-weight: 600;
@@ -196,13 +211,6 @@ nav {
       .orders .price p {
         font-size: 2rem;
         margin-right: 1rem; }
-      .orders .price button {
-        padding: 1rem 2rem;
-        background-color: #ff4d00;
-        border: none;
-        border-radius: .7rem;
-        color: #fff;
-        box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2); }
 
 .about {
   grid-row: 8/9;
@@ -228,22 +236,20 @@ nav {
       padding-bottom: 1rem;
       color: rgba(0, 0, 0, 0.7); }
     .about__text button {
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background-color: #ff4d00;
-      border: none;
-      border-radius: .7rem;
-      color: #fff;
-      box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2); }
+      margin-top: 2rem; }
   .about__pic {
     position: relative; }
     .about__pic img {
       width: 17rem;
-      border-radius: 4px; }
+      border-radius: 2rem; }
     .about__pic .image1 {
       position: absolute;
       top: -2rem;
-      z-index: 5; }
+      z-index: 5;
+      transition: all .2s; }
+      .about__pic .image1:hover {
+        transform: scale(1.1);
+        z-index: 12; }
     .about__pic .plane1 {
       position: absolute;
       top: -3rem;
@@ -252,7 +258,11 @@ nav {
       position: absolute;
       top: 15rem;
       left: 15rem;
-      z-index: 10; }
+      z-index: 10;
+      transition: all .2s; }
+      .about__pic .image2:hover {
+        transform: scale(1.1);
+        z-index: 12; }
     .about__pic .plane2 {
       position: absolute;
       top: 18rem;
@@ -309,14 +319,22 @@ nav {
     .app__pic .iphone_straight {
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      transition: all .2s; }
+      .app__pic .iphone_straight:hover {
+        transform: scale(1.1);
+        z-index: 10; }
       @media screen and (max-width: 720px) {
         .app__pic .iphone_straight {
           display: none; } }
     .app__pic .iphone_slant {
       position: absolute;
       top: 2rem;
-      left: 19rem; }
+      left: 19rem;
+      transition: all .2s; }
+      .app__pic .iphone_slant:hover {
+        transform: scale(1.1);
+        z-index: 10; }
       @media screen and (max-width: 720px) {
         .app__pic .iphone_slant {
           top: -8rem;
@@ -405,7 +423,12 @@ footer {
     border: 2px solid #fff; }
 
 .center {
-  text-align: center; }
+  text-align: center;
+  transition: all .2s;
+  text-shadow: 0rem 0.5rem 1rem rgba(255, 77, 0, 0.2); }
+  .center:hover {
+    transform: scale(1.2);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .head {
   font-size: 3rem;
@@ -413,6 +436,32 @@ footer {
 
 .para {
   font-size: 1.5rem; }
+
+.btn, .btn:link, .btn:visited {
+  cursor: pointer;
+  transition: all .2s;
+  padding: 1rem 2rem;
+  background-color: #ff4d00;
+  border: none;
+  border-radius: .7rem;
+  color: #fff;
+  box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn:hover {
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+  transform: translateY(-0.3rem); }
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
+
+.btn:active, .btn:focus {
+  transform: translate(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--animation {
+  animation: moveUp .5s ease-out .75s;
+  animation-fill-mode: backwards; }
 
 @media screen and (max-width: 800px) {
   .order {

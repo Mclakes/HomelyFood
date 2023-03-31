@@ -53,8 +53,14 @@ nav{
             font-size: 4rem;
             line-height: 5.6rem;
             padding-bottom: 1rem;
+            transition: all .3s;
             & span {
+                display: inline;
                 color: $color-primary;
+                transition: all .2s;
+                &:hover{
+                    text-shadow: 0.5rem 1rem 2rem rgba($color-primary, 0.5);
+                }                 
             }
         }
         & p {
@@ -64,12 +70,6 @@ nav{
         }
         & button {
             margin-top:2rem;
-            padding: 1rem 2rem;
-            background-color: $color-primary;
-            border: none;
-            border-radius: .7rem;
-            color: $color-white;
-            box-shadow: 0px 1rem 1rem rgba(0,0,0,0.2);
         }
     }
     & .intro-pic{
@@ -103,6 +103,10 @@ nav{
             font-size: 1.2rem;
         }
     }
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
 }
 .choose {
     grid-row: 4/5;
@@ -120,6 +124,9 @@ nav{
     grid-template-columns: repeat(3, 1fr);
     &s {
         background-color: $color-white;
+        padding: 3rem 0 ;
+        border-radius: 1rem;
+        transition: all .3s;
         
         & .icon {
             margin: 2rem;
@@ -132,7 +139,11 @@ nav{
             font-size: 1.5rem;
             margin: auto 4rem;
         }
-
+        &:hover{
+            transform: scale(1.1);
+            background-color: rgba($color-primary, 0.3);
+            box-shadow: 0, 1rem 2rem rgba($color-black, 0.9); 
+        }
     }
 
 }
@@ -154,8 +165,16 @@ nav{
     &s{
         padding: 2rem 0.5rem;
         border: 1px solid rgba($color-primary, 0.3);
+        transition: all .2s;
+            &:hover {
+                transform: scale(1.1);
+            }
         & img {
             width: 19rem;
+            transition: all .2s;
+            &:hover {
+                transform: scale(1.1);
+            }
         }
         &>p {
             font-size: 1.5rem;
@@ -172,14 +191,7 @@ nav{
                 font-size: 2rem; 
                 margin-right: 1rem; 
             }
-            & button {
-                padding: 1rem 2rem;
-                background-color: $color-primary;
-                border: none;
-                border-radius: .7rem;
-                color: $color-white;
-                box-shadow: 0px 1rem 1rem rgba(0,0,0,0.2);
-            }
+            //incase of button
         }
     }
 
@@ -216,12 +228,6 @@ nav{
         
         & button {
             margin-top:2rem;
-            padding: 1rem 2rem;
-            background-color: $color-primary;
-            border: none;
-            border-radius: .7rem;
-            color: $color-white;
-            box-shadow: 0px 1rem 1rem rgba(0,0,0,0.2);
         }
     }
 
@@ -229,12 +235,17 @@ nav{
         position: relative;
         & img {
             width: 17rem;
-            border-radius: 4px;
+            border-radius: 2rem;
         }
         & .image1 {
             position: absolute;
             top: -2rem;
             z-index: 5;
+            transition: all .2s;
+            &:hover {
+                transform: scale(1.1);
+                z-index: 12;
+            }
         }
         & .plane1 {
             position: absolute;
@@ -246,6 +257,11 @@ nav{
             top: 15rem;
             left: 15rem;
             z-index: 10;
+            transition: all .2s;
+            &:hover {
+                transform: scale(1.1);
+                z-index: 12;
+            }
         }
         & .plane2 {
             position: absolute;
@@ -317,6 +333,11 @@ nav{
             position: absolute;
             top: 0;
             left: 0;
+            transition: all .2s;
+            &:hover {
+                transform: scale(1.1);
+                z-index: 10;
+            }
             @media screen and (max-width: 720px) {
                 display:  none;
             }
@@ -325,6 +346,11 @@ nav{
             position: absolute;
             top: 2rem;
             left: 19rem;
+            transition: all .2s;
+            &:hover {
+                transform: scale(1.1);
+                z-index: 10;
+            }
             @media screen and (max-width: 720px) {
                 top: -8rem;
                 bottom: 0;
