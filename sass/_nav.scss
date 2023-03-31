@@ -13,6 +13,7 @@ nav{
     background-color: transparent;
     font-size: 1.4rem;
     text-transform: capitalize;
+    gap: 3rem;
 
     & ul{
         display: flex;
@@ -20,7 +21,7 @@ nav{
         & li {
             list-style: none;
             display: inline-block;
-            margin: 2rem 4rem;
+            margin: 2rem 4rem 2rem 0;
             & a {
                 text-decoration: none;
                 color: $color-black 
@@ -31,6 +32,7 @@ nav{
     & img {
         // display: block;
         margin: 2rem;
+        overflow: hidden;
     }  
 }
 .intro {
@@ -38,12 +40,11 @@ nav{
     grid-column: center-start/center-end;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 70vh;
+    // height: 70vh;
 
     &__text{
         display: flex;
         flex-direction: column;
-        // justify-content: space-evenly;
         align-items: self-start;
         padding: 5rem 0;
 
@@ -72,8 +73,14 @@ nav{
         }
     }
     & .intro-pic{
-        padding: 2rem;
-        background-image: url(../img/intro-pic.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0 2rem;
+        width: 90%;
+        height:90%;
+        border: 2px solid rgba($color-primary, 0.2);
+        // background-image: url(../img/intro-pic.png);
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -101,28 +108,19 @@ nav{
     grid-row: 4/5;
     grid-column: col-start 2 /col-end 5 ;
 
-    text-align: center;
-    & h3 {
-        font-size: 3rem;
-        color: $color-primary;
-        // ;spomething spacing 
-    }
-    & p {
-        font-size: 1.5rem;
-    }
 }
 .reason {
     grid-row: 5/6;    
     grid-column: center-start/center-end;
     padding: 4rem 0;
-    grid-gap: 3rem;
+    grid-gap: 3rem; 
 
     background-color: $color-background;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     &s {
         background-color: $color-white;
-        text-align: center;
+        
         & .icon {
             margin: 2rem;
         }
@@ -142,34 +140,19 @@ nav{
     grid-row: 6/7;
     grid-column: col-start 2 /col-end 5;
     margin: 5rem 0;
-
-    text-align: center;
-    & h3 {
-        font-size: 3rem;
-        color: $color-primary;
-        // ;spomething spacing 
-    }
-    & p {
-        font-size: 1.5rem;
-    }
 }
 .order {
-    &_1 {
-        grid-row: 7/8;
-    }
-    &_2 {
-        grid-row: 8/9;
-    }
-    
+    grid-row: 7/8;
     grid-column: center-start/center-end;
 
-
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8rem;
     align-items: center;
     justify-content: space-between;
     text-align: center;
     &s{
-        padding: 1.3rem 0.8rem;
+        padding: 2rem 0.5rem;
         border: 1px solid rgba($color-primary, 0.3);
         & img {
             width: 19rem;
@@ -202,11 +185,11 @@ nav{
 
 }
 .about {
-    grid-row: 9/10;
+    grid-row: 8/9;
     grid-column: center-start/ center-end;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 5rem 0;
+    padding: 10rem 0;
 
     &__text{
         display: flex;
@@ -243,11 +226,11 @@ nav{
     }
 
     &__pic{
+        position: relative;
         & img {
             width: 17rem;
             border-radius: 4px;
         }
-        position: relative;
         & .image1 {
             position: absolute;
             top: -2rem;
@@ -272,28 +255,18 @@ nav{
     }
 }
 .mobile {
-    grid-row: 10/11;
+    grid-row: 9/10;
     grid-column: col-start 2 /col-end 5;
-    margin: 5rem 0 0rem 0;
-
-    text-align: center;
-    & h3 {
-        font-size: 3rem;
-        color: $color-primary;
-        // ;spomething spacing 
-    }
-    & p {
-        font-size: 1.5rem;
-    }
+    padding: 5rem;
 }
 .app {
-    grid-row: 11/12;
+    grid-row: 10/11;
     grid-column: center-start/center-end;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     &__text{
-        width: 75%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -329,35 +302,45 @@ nav{
     &__pic {
         position: relative;
         transform: translateX(-10rem);
+        @media screen and (max-width: 900px) {
+            transform: translateX(-20rem);
+        }
+        @media screen and (max-width:800px) {
+            transform: translateX(-20rem);
+        }
+        @media screen and (max-width:700px) {
+            transform: translateX(-23rem);
+        }
+
+
         & .iphone_straight{
             position: absolute;
             top: 0;
             left: 0;
+            @media screen and (max-width: 720px) {
+                display:  none;
+            }
         }
         & .iphone_slant{
             position: absolute;
-            top: 3rem;
+            top: 2rem;
             left: 19rem;
+            @media screen and (max-width: 720px) {
+                top: -8rem;
+                bottom: 0;
+                transform: translateX(-12rem);
+            }
         }
     }
 
 }
 .testimonial {
-    grid-row: 12/13;
+    grid-row: 11/12;
     grid-column: col-start 2 /col-end 5;
     margin: 5rem 0;
-
-    text-align: center;
-    & h3 {
-        font-size: 3rem;
-        color: $color-primary;
-    }
-    & p {
-        font-size: 1.5rem;
-    }
 }
 .testimony{
-    grid-row: 13/14;    
+    grid-row: 12/13;    
     grid-column: center-start/center-end;
     padding: 4rem 0;
     grid-gap: 3rem;
@@ -384,17 +367,11 @@ nav{
     }
 }
 .newsletter{
-    grid-row: 14/15;    
+    grid-row: 13/14;    
     grid-column: col-start 2 /col-end 5;
     padding: 4rem 0;
 
-    text-align: center;
-    & h3 {
-        font-size: 3rem;
-        color: $color-primary;
-    }
     & p {
-        font-size: 1.5rem;
         color: rgba($color-black, 0.5);
         margin-bottom: 2rem;
     }
@@ -419,12 +396,12 @@ nav{
     }
 }
 .footer_background {
-    grid-row: 15/16;
+    grid-row: 14/15;
     grid-column: left-border-start/right-border-end;
     background-image: linear-gradient(to right, rgba(#ff4d00, .9), rgba(#ff4d00, .6))
 }
 footer{
-    grid-row: 15/16;
+    grid-row: 14/15;
     grid-column: col-start 2 /col-end 5;
     & table {
         grid-row: 15/16;

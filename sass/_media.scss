@@ -1,0 +1,140 @@
+@media screen and (max-width: 800px) {
+    .order {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .app {
+        padding: 5rem 0 10rem;
+    }
+    // top: -8rem;
+    // bottom: 0;
+    // transform: translateX(-12rem);
+}
+
+@media screen and (max-width: 600px) {
+    .intro {
+        display: block;
+        text-align: center;
+        background-image: radial-gradient(rgba($color-white, .8), rgba($color-primary,0.1)) , url(../img/intro-pic.png);
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        margin-bottom: 5rem;
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem 0;
+            margin: 2rem auto;
+        }
+        .intro-pic{
+            display: none;
+        }
+    }
+    .order {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .reason{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .testimony{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        & p {
+            width: 100%;
+        }
+    }
+
+    
+}
+
+@media screen and (max-width: 540px) {
+    .about {
+        grid-column: col-start 2 /col-end 5;
+        display: 2px solid red;
+        grid-template-columns: 1fr;
+        background-image:  linear-gradient(to right bottom, rgba($color-white, .9), rgba($color-white, .6)), url(../img/about1.png);
+        background-repeat: none;
+        background-position: center;
+        background-size: cover;
+        &__text {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            & p {
+                width: 100%;
+            }
+        }
+        &__pic{
+            display: none;
+        }
+    }
+    .app{
+        grid-column: col-start 2 /col-end 5;
+        display: 2px solid red;
+        grid-template-columns: 1fr;
+        background-image:  linear-gradient(to right bottom, rgba($color-white, .9), rgba($color-white, .6)), url(../img/iphone_slant.png); 
+        &__text {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            & p {
+                width: 100%;
+            }
+            & .download {
+                justify-content: center;
+                color: rgba;
+            }
+        }
+        &__pic{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .rating{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border: 2px solid rgba($color-primary,0.1);
+    }
+    
+    .order {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+        &__text{
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        &__pic{
+            display:  none;
+        }
+    }
+    // .app{
+       
+    // }
+    
+}
