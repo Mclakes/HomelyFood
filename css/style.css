@@ -38,7 +38,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 7rem 70rem repeat(2, 15rem) max-content 15rem max-content max-content max-content 43rem 20rem max-content 20rem 35rem;
+  grid-template-rows: 7rem 48rem repeat(2, 15rem) max-content 15rem max-content max-content max-content 43rem 20rem max-content 20rem 35rem;
   grid-template-columns: [left-border-start] minmax(2rem, 15rem) [left-border-end center-start] repeat(6, [col-start] minmax(6rem, 1fr) [col-end]) [center-end right-border-start] minmax(2rem, 15rem) [right-border-end]; }
 
 @media screen and (max-width: 1200px) {
