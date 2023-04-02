@@ -38,7 +38,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 7rem 48rem repeat(2, 15rem) max-content 15rem max-content max-content max-content 43rem 20rem max-content 20rem 35rem;
+  grid-template-rows: 7rem 70rem repeat(2, 15rem) max-content 15rem max-content max-content max-content 43rem 20rem max-content 20rem 35rem;
   grid-template-columns: [left-border-start] minmax(2rem, 15rem) [left-border-end center-start] repeat(6, [col-start] minmax(6rem, 1fr) [col-end]) [center-end right-border-start] minmax(2rem, 15rem) [right-border-end]; }
 
 @media screen and (max-width: 1200px) {
@@ -72,9 +72,13 @@ nav {
   font-size: 1.4rem;
   text-transform: capitalize;
   gap: 3rem; }
+  nav .logo {
+    margin: auto 0; }
   nav ul {
     display: flex;
     align-self: flex-start; }
+    nav ul:first-child {
+      color: #ff4d00; }
     nav ul li {
       list-style: none;
       display: inline-block;
@@ -82,15 +86,13 @@ nav {
       nav ul li a {
         text-decoration: none;
         color: #000; }
-  nav img {
-    margin: 2rem;
-    overflow: hidden; }
 
 .intro {
   grid-row: 2/3;
   grid-column: center-start/center-end;
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem 0 0 0; }
   .intro__text {
     display: flex;
     flex-direction: column;
@@ -159,15 +161,22 @@ nav {
     background-color: #fff;
     padding: 3rem 0;
     border-radius: 1rem;
-    transition: all .3s; }
+    transition: all .3s;
+    text-align: center; }
     .reasons .icon {
-      margin: 2rem; }
+      margin-bottom: 3rem;
+      transform: scale(2);
+      display: block; }
+      .reasons .icon i {
+        color: rgba(255, 77, 0, 0.8);
+        transform: scale(2); }
     .reasons h4 {
       font-size: 2rem;
-      margin: 2rem; }
+      margin-bottom: 2rem; }
     .reasons p {
       font-size: 1.5rem;
-      margin: auto 4rem; }
+      padding: 0 3rem;
+      margin: 2rem auto; }
     .reasons:hover {
       transform: scale(1.1);
       background-color: rgba(255, 77, 0, 0.3);
@@ -394,7 +403,7 @@ nav {
 .footer_background {
   grid-row: 14/15;
   grid-column: left-border-start/right-border-end;
-  background-image: linear-gradient(to right, rgba(255, 77, 0, 0.9), rgba(255, 77, 0, 0.6)); }
+  background-image: linear-gradient(to right, rgba(255, 77, 0, 0.5), rgba(255, 77, 0, 0.6)); }
 
 footer {
   grid-row: 14/15;
@@ -413,11 +422,14 @@ footer {
         padding: 0.8rem 0; }
       footer table tr td {
         padding: 0.8rem 0; }
+        footer table tr td a:visited, footer table tr td a:link {
+          color: #fff;
+          text-decoration: none; }
 
 .copyright {
   text-align: center;
   color: #fff;
-  font-size: 1.1rem; }
+  font-size: 1.2rem; }
   .copyright hr {
     color: #fff;
     border: 2px solid #fff; }
@@ -436,6 +448,17 @@ footer {
 
 .para {
   font-size: 1.5rem; }
+
+.logo {
+  overflow: hidden;
+  background-image: url(../img/Homely.png);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.primary {
+  color: #ff4d00;
+  font-size: bold; }
 
 .btn, .btn:link, .btn:visited {
   cursor: pointer;

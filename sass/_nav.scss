@@ -15,32 +15,34 @@ nav{
     text-transform: capitalize;
     gap: 3rem;
 
+    & .logo {
+        margin: auto 0;
+    }
+
     & ul{
         display: flex;
         align-self: flex-start;
+        &:first-child{
+            color: $color-primary;
+        }
         & li {
             list-style: none;
             display: inline-block;
             margin: 2rem 4rem 2rem 0;
-            & a {
+            a {
                 text-decoration: none;
-                color: $color-black 
+                color: $color-black
             }
         }
     }
-
-    & img {
-        // display: block;
-        margin: 2rem;
-        overflow: hidden;
-    }  
+ 
 }
 .intro {
     grid-row: 2/3;
     grid-column: center-start/center-end;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // height: 70vh;
+    padding: 3rem 0 0 0;
 
     &__text{
         display: flex;
@@ -127,17 +129,25 @@ nav{
         padding: 3rem 0 ;
         border-radius: 1rem;
         transition: all .3s;
+        text-align: center;
         
         & .icon {
-            margin: 2rem;
+            margin-bottom: 3rem;
+            transform: scale(2);
+            display: block;
+            & i {
+                color: rgba($color-primary, 0.8);
+                transform: scale(2);
+            }
         }
         & h4 {
             font-size: 2rem;
-            margin: 2rem;
+            margin-bottom: 2rem;
         }
         & p {
             font-size: 1.5rem;
-            margin: auto 4rem;
+            padding: 0 3rem;
+            margin: 2rem auto;
         }
         &:hover{
             transform: scale(1.1);
@@ -424,7 +434,7 @@ nav{
 .footer_background {
     grid-row: 14/15;
     grid-column: left-border-start/right-border-end;
-    background-image: linear-gradient(to right, rgba(#ff4d00, .9), rgba(#ff4d00, .6))
+    background-image: linear-gradient(to right, rgba(#ff4d00, .5), rgba(#ff4d00, .6));
 }
 footer{
     grid-row: 14/15;
@@ -444,18 +454,24 @@ footer{
               }
               & td {
                 padding: 0.8rem 0;
+                & a {
+                    &:visited, &:link{
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+                }
               }
           }
       }
 }
-  .copyright {  
+  .copyright { 
+    text-align: center;
+    color: $color-white;
+    font-size: 1.2rem;
     & hr {
         color: $color-white;
         border: 2px solid $color-white;
     }
-    text-align: center;
-    color: $color-white;
-    font-size: 1.1rem;
   }
 
 

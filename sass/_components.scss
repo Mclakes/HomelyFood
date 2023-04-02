@@ -17,6 +17,21 @@
     font-size: 1.5rem;
 }
 
+.logo {
+    // display: block;
+    // margin: 2rem;
+    overflow: hidden;
+    background-image: url(../img/Homely.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.primary{
+    color: $color-primary;
+    font-size: bold;
+}
+
 .btn, .btn:link, .btn:visited {
     cursor: pointer;
     transition: all .2s;
